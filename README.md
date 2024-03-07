@@ -1,2 +1,2 @@
-# Programa-o-Web
-Projetos e atividades da matéria de Programação para Web
+# Programação Web
+Projetos e atividades da matéria de Programação para Web.
