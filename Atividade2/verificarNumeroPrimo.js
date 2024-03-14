@@ -1,6 +1,6 @@
 function verificarNumeroPrimo(n) {
     if (n > 1) {
-        for (let i = 2; i < n; i++) {
+        for (let i = 2; i < Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false;
             }
@@ -11,13 +11,17 @@ function verificarNumeroPrimo(n) {
     }
 }
 
-console.log(verificarNumeroPrimo(0)); //false
-console.log(verificarNumeroPrimo(1)); //false
-console.log(verificarNumeroPrimo(2)); //true
-console.log(verificarNumeroPrimo(3)); //true
-console.log(verificarNumeroPrimo(7)); //true
-console.log(verificarNumeroPrimo(83)); //true
-console.log(verificarNumeroPrimo(100)); //false
-console.log(verificarNumeroPrimo(991)); //true
-console.log(verificarNumeroPrimo(104729)); //true
-console.log(verificarNumeroPrimo(14348907)); //false
+function mostraResultado(func, n) {
+    func == true ? console.log(`O número ${n} é primo.`) : console.log(`O número ${n} não é primo.`)
+}
+
+mostraResultado(verificarNumeroPrimo(0), 0); //false
+mostraResultado(verificarNumeroPrimo(1), 1); //false
+mostraResultado(verificarNumeroPrimo(2), 2); //true
+mostraResultado(verificarNumeroPrimo(3), 3); //true
+mostraResultado(verificarNumeroPrimo(7), 7); //true
+mostraResultado(verificarNumeroPrimo(83), 83); //true
+mostraResultado(verificarNumeroPrimo(100), 100); //false
+mostraResultado(verificarNumeroPrimo(991), 991); //true
+mostraResultado(verificarNumeroPrimo(104729), 104729); //true
+mostraResultado(verificarNumeroPrimo(14348907), 14348907); //false
